@@ -1,0 +1,14 @@
+{
+  "name": "@innbell/types",
+  "private": true,
+  "exports": {
+    ".": "./types/index.d.ts"
+  },
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "innbell",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "axios": "^1.4.0",
+    "esbuild": "^0.18.11",
+    "eslint": "8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-define-config": "^1.21.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-esbuild": "^0.11.2",
+    "gulp-tap": "^2.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "lerna": "^7.1.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "garfish": "^1.16.2",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "axios": "^1.4.0"
+  }
+}

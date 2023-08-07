@@ -1,0 +1,25 @@
+{
+  "name": "@innbell/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "node build/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "axios": "^1.4.0",
+    "glob": "^10.3.3"
+  },
+  "peerDependencies": {
+    "axios": "^1.4.0"
+  },
+  "dependencies": {
+    "@innbell/types": "workspace:^",
+    "@innbell/utils": "workspace:^"
+  }
+}
