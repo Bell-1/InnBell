@@ -14,7 +14,7 @@ export function useNamespace(block: string, namespace?: string) {
 	}
 
 	function is(condition: string, isBool: boolean) {
-		return isBool ? `${prefix}--${condition}` : ''
+		return isBool ? `is-${condition}` : ''
 	}
 
 	return { b, e, m, is }

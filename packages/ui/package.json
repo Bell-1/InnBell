@@ -1,15 +1,49 @@
 {
-  "name": "ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@innbell/ui",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/ui/ui.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve --no-open",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
   "dependencies": {
-    "@stencil/core": "4.0.1"
-  }
+    "@innbell/style": "workspace:^",
+    "@innbell/utils": "workspace:^",
+    "@stencil/core": "^4.1.0",
+    "tinycolor2": "^1.6.0"
+  },
+  "devDependencies": {
+    "@stencil-community/postcss": "^2.2.0",
+    "@stencil/react-output-target": "^0.5.3",
+    "@stencil/sass": "^3.0.5",
+    "@stencil/vue-output-target": "^0.8.6",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "@vue/runtime-core": "^3.3.4",
+    "autoprefixer": "^10.4.15",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "puppeteer": "^21.0.3",
+    "sass": "^1.66.1"
+  },
+  "license": "MIT"
 }

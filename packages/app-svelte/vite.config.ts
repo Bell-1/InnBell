@@ -1,7 +1,29 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vitest/config';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
-})
+	resolve: {
+		alias: {
+			'@': '/src'
+		}
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: '@import "@innbell/style";'
+			}
+		}
+	},
+	server: {
+		port: 8083,
+		cors: true,
+		origin: 'http://localhost:3000',
+		fs: {
+			allow: ['../']
+		}
+	},
+	plugins: [sveltekit()],
+	test: {
+		include: ['src/**/*.{test,spec}.{js,ts}']
+	}
+});

@@ -1,0 +1,107 @@
+{
+  "id": "4223621",
+  "name": "innbell-ui",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-inn-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "33519",
+      "name": "home_fill",
+      "font_class": "home-fill",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    },
+    {
+      "icon_id": "1470543",
+      "name": "arrow_up",
+      "font_class": "arrow-up",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "1470545",
+      "name": "arrow_down",
+      "font_class": "arrow-down",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "1471839",
+      "name": "fail",
+      "font_class": "fail-circle",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "4766901",
+      "name": "cloud-upload",
+      "font_class": "cloud-upload",
+      "unicode": "e7d9",
+      "unicode_decimal": 59353
+    },
+    {
+      "icon_id": "6496026",
+      "name": "Vue",
+      "font_class": "vue",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "6496027",
+      "name": "React",
+      "font_class": "react",
+      "unicode": "e79a",
+      "unicode_decimal": 59290
+    },
+    {
+      "icon_id": "7009039",
+      "name": "warning",
+      "font_class": "warning",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "10678418",
+      "name": "info",
+      "font_class": "info-circle",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "12865653",
+      "name": "check",
+      "font_class": "check-circle",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    },
+    {
+      "icon_id": "13304052",
+      "name": "svelte",
+      "font_class": "svelte",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "15838431",
+      "name": "arrow-right",
+      "font_class": "arrow-right",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "21937749",
+      "name": "ic_notice",
+      "font_class": "notice",
+      "unicode": "e6c3",
+      "unicode_decimal": 59075
+    },
+    {
+      "icon_id": "18991666",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e85f",
+      "unicode_decimal": 59487
+    }
+  ]
+}

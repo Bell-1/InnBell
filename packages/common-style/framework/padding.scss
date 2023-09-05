@@ -1,0 +1,27 @@
+// 0-100的间距样式
+@for $i from 0 to 101 {
+	.p-t-#{$i} {
+		padding-top: #{$i}px;
+	}
+	.p-r-#{$i} {
+		padding-right: #{$i}px;
+	}
+	.p-b-#{$i} {
+		padding-bottom: #{$i}px;
+	}
+	.p-l-#{$i} {
+		padding-left: #{$i}px;
+	}
+	.m-t-#{$i} {
+		margin-top: #{$i}px;
+	}
+	.m-r-#{$i} {
+		margin-right: #{$i}px;
+	}
+	.m-b-#{$i} {
+		margin-bottom: #{$i}px;
+	}
+	.m-l-#{$i} {
+		margin-left: #{$i}px;
+	}
+}

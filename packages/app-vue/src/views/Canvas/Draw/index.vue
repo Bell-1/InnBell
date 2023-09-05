@@ -1,0 +1,66 @@
+<template>
+	<div class="Draw" :class="{ edit: isEdit }">
+		<b-btn type="primary" @click="handleEdit" v-show="!isEdit">编辑</b-btn>
+		<b-btn class="cancel-btn" @click="handleCancel" v-show="isEdit">取消</b-btn>
+		<template v-if="isEdit">
+			<canvas-container></canvas-container>
+		</template>
+	</div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+import CanvasContainer from './CanvasContainer.vue'
+
+const isEdit = ref(false)
+
+const handleEdit = () => {
+	isEdit.value = true
+}
+
+const handleCancel = () => {
+	isEdit.value = false
+}
+
+</script>
+
+<style lang="scss" scoped>
+.Draw {
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	display: flex;
+	align-items: flex-start;
+
+	&.edit {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 100;
+	}
+
+	.cancel-btn {
+		position: fixed;
+		top: 100px;
+		right: 50px;
+		width: 80px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #666;
+		border-radius: 6px;
+		box-shadow: 6px 6px 12px #999, -6px -6px 12px #fff;
+		cursor: pointer;
+		z-index: 100;
+		background: white;
+
+		&:hover {
+			background: lighten($color: #999, $amount: 15%);
+			color: lighten($color: #666, $amount: 15%);
+		}
+	}
+}
+</style>

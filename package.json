@@ -10,7 +10,6 @@
     "esbuild": "^0.18.11",
     "eslint": "8.40.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard": "^17.1.0",
     "eslint-define-config": "^1.21.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gulp": "^4.0.2",

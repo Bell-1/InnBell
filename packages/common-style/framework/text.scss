@@ -1,0 +1,18 @@
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.link-text {
+  &:hover {
+    color: #00dbde;
+    cursor: pointer;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,96 @@
+// css 变量
+:root {
+  // 字体
+  --inn-font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+
+  // 内间距
+  --inn-padding-xxs: 4px;
+  --inn-padding-xs: 8px;
+  --inn-padding-s: 12px;
+  --inn-padding-m: 16px;
+  --inn-padding-l: 20px;
+  --inn-padding-xl: 24px;
+
+  // 外间距
+  --inn-margin-xxs: 4px;
+  --inn-margin-xs: 8px;
+  --inn-margin-s: 12px;
+  --inn-margin-m: 16px;
+  --inn-margin-l: 20px;
+  --inn-margin-xl: 24px;
+
+  // 基础色
+	--inn-color-primary: #9d80f6;
+  --inn-color-primary-light: #bdabed;
+  --inn-color-primary-dark: #5b509c;
+	--inn-color-danger: #F56C6C;
+	--inn-color-success: #67C23A;
+	--inn-color-warning: #E6A23C;
+	--inn-color-info: #909399;
+	--inn-color-white: #ffffff;
+	--inn-color-black: #000000;
+  --inn-color-gray: #d1d1d1;
+
+  // 文本色
+  --inn-text-color-primary: #303133;
+  --inn-text-color: #606266;
+  --inn-text-color-secondary: #909399;
+  --inn-text-color-placeholder: #C0C4CC;
+  // 文本禁用
+  --inn-text-color-disabled: #999;
+
+  // 文本大小
+  --inn-font-size: 14px;
+  --inn-font-size-small: 12px;
+  --inn-font-size-large: 16px;
+
+  // 行高
+  --inn-line-height: 22px;
+  --inn-line-height-small: 18px;
+  --inn-line-height-large: 26px;
+
+  // 粗细
+  --inn-font-weight: 400;
+  --inn-font-weight-bold: 600;
+  --inn-font-weight-extra-bold: 800;
+
+  // 背景色
+  --inn-background-color: #f5f5f5;
+  --inn-background-color-secondary: #f7f9fc;
+
+  // 背景禁用
+  --inn-background-color-disabled: #f5f5f5;
+
+  // 边框色
+  --inn-border-color: #DCDFE6;
+  --inn-border-color-secondary: #E4E7ED;
+  --inn-border-color-extra: #EBEEF5;
+  // 边框禁用
+  --inn-border-color-disabled: #e4e7ed;
+
+  // 边框圆角
+  --inn-border-radius: 4px;
+  --inn-border-radius-small: 2px;
+  --inn-border-radius-large: 8px;
+
+  // 边框粗细
+  --inn-border-width: 1px;
+  --inn-border-width-thin: 0.5px;
+  --inn-border-width-thick: 2px;
+
+  // 阴影颜色
+  --inn-shadow-color: rgba(0, 0, 0, 0.2);
+
+  // 阴影大小
+  --inn-shadow-size: 0 2px 4px 0;
+
+  // 阴影
+  --inn-shadow: var(--inn-shadow-size) var(--inn-shadow-color);
+
+}
+
+html {
+  font-family: var(--inn-background-color);
+  font-size: var(--inn-font-size);
+  color: var(--inn-font-color);
+}

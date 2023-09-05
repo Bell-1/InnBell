@@ -1,0 +1,78 @@
+@import './root.scss';
+
+$color-primary: var(--inn-color-primary, #8873c9);
+$color-primary-light: var(--inn-color-primary-light, #b3a1e3);
+$color-primary-dark: var(--inn-color-primary-dark, #5f4dbf);
+$color-danger: var(--inn-color-danger, #ff480b);
+$color-success: var(--inn-color-success, #63ff5a);
+$color-warning: var(--inn-color-warning, #eeee59);
+$color-info: var(--inn-color-info, #757575);
+$color-white: var(--inn-color-white, #ffffff);
+$color-black: var(--inn-color-black, #000000);
+$color-gray: var(--inn-color-gray, #d1d1d1);
+
+// text
+$text-color-primary: var(--inn-text-color-primary, #000);
+$text-color: var(--inn-text-color, #333);
+$text-color-secondary: var(--inn-text-color-secondary, #666);
+// text disabled
+$text-color-disabled: var(--inn-text-color-disabled, #999);
+
+// 文本大小
+$font-size: var(--inn-font-size, 14px);
+$font-size-small: var(--inn-font-size-small, 12px);
+$font-size-large: var(--inn-font-size-large, 16px);
+
+// 行高
+$line-height: var(--inn-line-height, 22px);
+$line-height-small: var(--inn-line-height-small, 18px);
+$line-height-large: var(--inn-line-height-large, 26px);
+
+// 粗细
+$font-weight: var(--inn-font-weight, 400);
+$font-weight-bold: var(--inn-font-weight-bold, 600);
+$font-weight-extra-bold: var(--inn-font-weight-extra-bold, 800);
+
+// 边框颜色
+$border-color: var(--inn-border-color, #ebeef5);
+$border-color-secondary: var(--inn-border-color-secondary, #e4e7ed);
+$border-color-extra: var(--inn-border-color-extra, #ebecf0);
+// 边框禁用
+$border-color-disabled: var(--inn-border-color-disabled, #f2f6fc);
+
+// 边框粗细
+$border-width: var(--inn-border-width, 1px);
+$border-width-thin: var(--inn-border-width-thin, 0.5px);
+$border-width-thick: var(--inn-border-width-thick, 2px);
+
+// border-radius
+$border-radius: var(--inn-border-radius, 4px);
+$border-radius-small: var(--inn-border-radius-small, 2px);
+$border-radius-large: var(--inn-border-radius-large, 8px);
+
+// background
+$background-color: var(--inn-background-color, #ffffff);
+$background-color-secondary: var(--inn-background-color-secondary, #f7f9fc);
+// background disabled
+$background-color-disabled: var(--inn-background-color-disabled, #f5f5f5);
+
+// size
+$font-size: var(--inn-font-size, 14px);
+$font-size-small: var(--inn-font-size-small, 12px);
+$font-size-large: var(--inn-font-size-large, 16px);
+
+// padding
+$padding-xxs: var(--inn-padding-xxs, 4px);
+$padding-xs: var(--inn-padding-xs, 8px);
+$padding-s: var(--inn-padding-s, 12px);
+$padding-m: var(--inn-padding-m, 16px);
+$padding-l: var(--inn-padding-l, 20px);
+$padding-xl: var(--inn-padding-xl, 24px);
+
+// margin
+$margin-xxs: var(--inn-margin-xxs, 4px);
+$margin-xs: var(--inn-margin-xs, 8px);
+$margin-s: var(--inn-margin-s, 12px);
+$margin-m: var(--inn-margin-m, 16px);
+$margin-l: var(--inn-margin-l, 20px);
+$margin-xl: var(--inn-margin-xl, 24px);

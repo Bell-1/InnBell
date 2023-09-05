@@ -1,0 +1,23 @@
+@include b('InnUI') {
+	@include e('title') {
+		padding: $padding-s 0;
+		font-size: $font-size-large;
+		color: $color-primary;
+		font-weight: $font-weight-bold;
+	}
+}
+
+@include b('InnUI-btn') {
+	.inn-button {
+		margin-right: $margin-s;
+	}
+
+	@include e('group') {
+		margin-bottom: $margin-m;
+	}
+
+	@include e('title') {
+		padding: $padding-s 0;
+		font-weight: $font-weight-bold;
+	}
+}

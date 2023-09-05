@@ -1,0 +1,186 @@
+@include b('Login') {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	// background-image: url(@/assets/images/bg-01.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include e('content') {
+		width: 500px;
+		background: #fff;
+		border-radius: 10px;
+		overflow: hidden;
+		padding: 54px;
+
+		@include e('title') {
+			font-family: Poppins-Bold;
+			font-size: 39px;
+			font-weight: 400;
+			color: #333;
+			line-height: 1.2;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			padding-bottom: 49px;
+			display: block;
+			box-sizing: border-box;
+		}
+
+		@include e('form') {
+			width: 100%;
+
+			@include e('form-item') {
+				position: relative;
+				width: 100%;
+				margin-bottom: 23px;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #212529;
+				font-family: Poppins-Regular, sans-serif;
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+				border-bottom: 2px solid #d9d9d9;
+
+				@include e('form-label') {
+					font-family: Poppins-Regular;
+					font-size: 14px;
+					font-weight: 400;
+					color: #333;
+					line-height: 1.5;
+					padding-left: 7px;
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+				}
+
+				input {
+					display: block;
+					width: 100%;
+					height: 55px;
+					padding: 0 7px;
+					font-family: Poppins-Medium;
+					font-size: 16px;
+					font-weight: normal;
+					line-height: 1.2;
+					color: #333;
+					background: 0 0;
+					border: none;
+					outline: none;
+					box-sizing: border-box;
+					overflow: visible;
+
+					&:focus + .form-icon::before {
+						width: 100%;
+					}
+				}
+
+				.form-icon {
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					pointer-events: none;
+					font-size: 1rem;
+					font-weight: 400;
+					line-height: 1.5;
+					color: #212529;
+					font-family: Poppins-Regular, sans-serif;
+					box-sizing: border-box;
+
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: -2px;
+						left: 0;
+						width: 0;
+						height: 2px;
+						background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+						transition: all 0.4s;
+					}
+				}
+			}
+		}
+
+		@include e('login-btn') {
+			width: 100%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 20px;
+			text-transform: uppercase;
+			font-family: Poppins-Medium;
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 1.2;
+			color: #fff;
+			background: 0 0;
+			border: none;
+			outline: none !important;
+			box-sizing: border-box;
+			overflow: visible;
+			margin: 0;
+			cursor: pointer;
+
+			&:hover {
+				@include e('login-btn-bg') {
+					left: 0;
+				}
+			}
+
+			@include e('login-btn-wrap') {
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				display: block;
+				padding: 0;
+				margin: 0 auto;
+				border-radius: 25px;
+				overflow: hidden;
+				box-sizing: border-box;
+				-webkit-box-shadow: 0 5px 30px 0 rgba(3, 216, 222, 0.2);
+
+				@include e('login-btn-bg') {
+					position: absolute;
+					z-index: -1;
+					width: 300%;
+					height: 100%;
+					top: 0;
+					left: -100%;
+					background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+					transition: all 0.4s;
+				}
+
+				@include e('login-btn-content') {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					height: 50px;
+					padding: 0 20px;
+					font-family: Poppins-Medium;
+					font-size: 16px;
+					font-weight: normal;
+					line-height: 1.2;
+					color: #fff;
+					background: 0 0;
+					border: none;
+					outline: none !important;
+					box-sizing: border-box;
+					overflow: visible;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}

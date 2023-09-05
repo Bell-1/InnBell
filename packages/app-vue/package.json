@@ -5,21 +5,28 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@garfish/bridge-vue-v3": "^1.16.0",
-    "@innbell/types": "file:../types",
+    "@innbell/style": "workspace:^",
+    "@innbell/types": "workspace:^",
+    "@innbell/ui": "workspace:^",
     "@innbell/utils": "workspace:^",
+    "@splinetool/loader": "^0.9.434",
+    "ant-design-vue": "^4.0.1",
+    "gl-mat4": "^1.2.0",
+    "three": "^0.155.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "eslint": "^8.43.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-define-config": "^1.21.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-typescript": "^0.14.0",
     "eslint-plugin-vue": "^9.15.0",
     "prettier": "^2.8.0",
     "typescript": "^5.1.3",

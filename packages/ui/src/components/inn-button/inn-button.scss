@@ -1,0 +1,149 @@
+@include namespace('inn') {
+	@include b('button') {
+		// 去除按钮默认样式
+		outline: none;
+		cursor: pointer;
+		display: inline-block;
+		// 基于按钮颜色计算的hover颜色和文本颜色
+		// --inn-button--primary-hover-bg-color
+		// --inn-button--primary-text-color
+		// --inn-button--primary-hover-text-color
+
+		// 默认样式
+		padding: $padding-xxs $padding-m;
+		background: $color-white;
+		border-radius: $border-radius;
+		border: 1px solid $border-color;
+		line-height: $line-height;
+
+		&:hover {
+			border-color: $color-primary;
+			color: $color-primary;
+		}
+
+		@include when('ghost') {
+			background: transparent;
+			&:hover {
+				background: transparent;
+			}
+		}
+
+		&--primary,
+		&--success,
+		&--warning,
+		&--danger {
+			color: var(--inn-button-text-color);
+			&:hover {
+				color: var(--inn-button-hover-text-color);
+				background: var(--inn-button-hover-bg-color, $color-primary);
+				border-color: var(--inn-button-hover-bg-color, $color-primary);
+			}
+		}
+
+		&--primary {
+			background: $color-primary;
+			border-color: $color-primary;
+
+			@include when('ghost') {
+				color: $color-primary;
+				&:hover {
+					background: none;
+					border-color: $color-primary;
+					color: $color-primary;
+				}
+			}
+		}
+
+		&--success {
+			background: $color-success;
+			border-color: $color-success;
+
+			@include when('ghost') {
+				color: $color-success;
+				&:hover {
+					border-color: $color-success;
+					color: $color-success;
+				}
+			}
+		}
+
+		&--warning {
+			background: $color-warning;
+			border-color: $color-warning;
+
+			@include when('ghost') {
+				color: $color-warning;
+				&:hover {
+					border-color: $color-warning;
+					color: $color-warning;
+				}
+			}
+		}
+
+		&--danger {
+			background: $color-danger;
+			border-color: $color-danger;
+
+			@include when('ghost') {
+				color: $color-danger;
+				&:hover {
+					border-color: $color-danger;
+					color: $color-danger;
+				}
+			}
+		}
+
+		// 虚线
+		&--dashed {
+			border-style: dashed;
+			&:hover {
+				border-color: $color-primary;
+			}
+		}
+
+		// 文本
+		&--text {
+			background: transparent;
+			border-color: transparent;
+			&:hover {
+				border-color: transparent;
+				background: rgb(0 0 0 / 6%);
+			}
+		}
+
+		// 链接
+		&--link {
+			background: transparent;
+			border-color: transparent;
+			color: $color-primary;
+			&:hover {
+				color: $color-primary;
+			}
+		}
+
+		@include when('round') {
+			border-radius: 16px;
+		}
+
+		@include when('circle') {
+			padding: 0;
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@include when('disabled') {
+			background: $background-color-disabled;
+			color: $text-color-disabled;
+			border-color: $border-color-disabled;
+
+			&:hover {
+				cursor: not-allowed;
+			}
+		}
+	}
+}

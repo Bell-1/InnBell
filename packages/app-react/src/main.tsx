@@ -1,40 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import ReactDOM from "react-dom"
+import { createRoot } from 'react-dom/client'
+import { reactBridge } from '@garfish/bridge-react-v18';
+import Error from './components/ErrorBoundary';
+import { defineCustomElements } from '@innbell/ui/loader'
+import RootComponent from './root';
+import "./public-path"
+import '@innbell/style'
 
-/**
- * bootstrap 只会在微应用初始化的时候调用一次，下次微应用重新进入时会直接调用 mount 钩子，不会再重复触发 bootstrap。
- * 通常我们可以在这里做一些全局变量的初始化，比如不会在 unmount 阶段被销毁的应用级别的缓存等。
- */
-export async function bootstrap() {
-  console.log('react app bootstraped');
+defineCustomElements()
+
+// 👇 将渲染操作放入 mount 函数，子应用初始化时会自动执行
+window.mount = () => {
+  ReactDOM.render(<RootComponent />, document.getElementById("react-sub-app"))
 }
 
-/**
- * 应用每次进入都会调用 mount 方法，通常我们在这里触发应用的渲染方法
- */
-export async function mount(props) {
-  const root = props.container ? props.container.querySelector('#root') : document.getElementById('root') as HTMLElement
-  ReactDOM.createRoot(root).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  )
+// 👇 将卸载操作放入 unmount 函数，就是上面步骤2中的卸载函数
+window.unmount = () => {
+  ReactDOM.unmountComponentAtNode(document.getElementById("react-sub-app"))
 }
 
-/**
- * 应用每次 切出/卸载 会调用的方法，通常在这里我们会卸载微应用的应用实例
- */
-export async function unmount(props) {
-  // ReactDOM.unmountComponentAtNode(
-  //   props.container ? props.container.querySelector('#root') : document.getElementById('root'),
-  // );
-}
-
-/**
- * 可选生命周期钩子，仅使用 loadMicroApp 方式加载微应用时生效
- */
-export async function update(props) {
-  console.log('update props', props);
+// 如果不在微前端环境，则直接执行mount渲染
+if (!window.__MICRO_APP_ENVIRONMENT__) {
+  window.mount()
 }

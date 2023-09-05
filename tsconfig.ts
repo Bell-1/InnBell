@@ -6,7 +6,8 @@ export default {
 		'strict': true,
 		'path': {
 			'@innbell/utils': ['./packages/utils'],
-			'@innbell/types': ['./packages/types']
+			'@innbell/types': ['./packages/types'],
+			'@innbell/api': ['./packages/api'],
 		}
 	},
 	include: [

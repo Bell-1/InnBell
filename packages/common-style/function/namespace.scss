@@ -1,0 +1,7 @@
+@function e($element){
+  @return ".#{$block}#{$element-separator}#{$element}";
+}
+
+@function when($state){
+  @return ".#{$state-prefix + $state}"
+}
