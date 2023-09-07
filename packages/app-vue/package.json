@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@antv/x6": "^2.13.1",
     "@innbell/style": "workspace:^",
     "@innbell/types": "workspace:^",
     "@innbell/ui": "workspace:^",

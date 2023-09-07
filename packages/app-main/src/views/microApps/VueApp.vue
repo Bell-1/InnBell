@@ -1,13 +1,12 @@
 <template>
-	<div id="MicroApp">
-		<micro-app
-			:name="AppInfo.name"
-			:url='AppInfo.url'
-			:baseroute="AppInfo.baseroute"
-			disable-memory-router
-			iframe
-		></micro-app>
-	</div>
+	<micro-app
+		id="MicroApp"
+		:name="AppInfo.name"
+		:url='AppInfo.url'
+		:baseroute="AppInfo.baseroute"
+		disable-memory-router
+		iframe
+	></micro-app>
 </template>
 <script lang="ts">
 export default {
@@ -25,4 +24,11 @@ const AppInfo = {
 }
 
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+#MicroApp {
+	height: 100%;
+	micro-app-body {
+		height: 100%;
+	}
+}
+</style>

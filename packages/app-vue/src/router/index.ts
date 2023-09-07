@@ -48,7 +48,12 @@ const routes: Readonly<RouteRecordRaw[]> = [
 	{
 		path: '/three',
 		name: 'ThreeJS',
-		component: () => import('@/views/ThreeJS/index.vue'),
+		component: () => import('@/views/Three/index.vue'),
+	},
+	{
+		path: '/flow-chart',
+		name: 'FlowChart',
+		component: () => import('@/views/FlowChart/index.vue'),
 	},
 	{
 		path: '/:pathMatch(.*)*',

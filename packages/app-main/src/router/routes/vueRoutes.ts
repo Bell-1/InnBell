@@ -40,7 +40,7 @@ export const routes: RouteRecordRaw[] = [
 				path: 'canvas/star',
 				component: microApp,
 				meta: {
-					title: 'Canvas-star',
+					title: 'Canvas star',
 					isMenu: true,
 					microName: 'SUB_VUE',
 				},
@@ -49,7 +49,16 @@ export const routes: RouteRecordRaw[] = [
 				path: 'canvas/clip',
 				component: microApp,
 				meta: {
-					title: 'Canvas-clip',
+					title: 'Canvas clip',
+					isMenu: true,
+					microName: 'SUB_VUE',
+				},
+			},
+			{
+				path: 'flow-chart',
+				component: microApp,
+				meta: {
+					title: 'Flow chart',
 					isMenu: true,
 					microName: 'SUB_VUE',
 				},
