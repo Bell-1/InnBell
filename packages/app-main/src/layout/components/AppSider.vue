@@ -77,42 +77,42 @@ const handleSelectMenu = async(meneItem: any) => {
 </script>
 <style lang="scss">
 @include b('AppSider') {
-  background: var(--background-color) !important;
-  color: var(--text-color) !important;
+  background: $background-color !important;
+  color: $text-color !important;
 
   @include e('menu') {
     height: 100%;
     border-right: 0;
     background: none;
-    color: var(--text-color);
+    color: $text-color;
 
     .ant-menu-item-group-title {
-      color: var(--text-color);
+      color: $text-color;
 
       &:hover {
-        color: var(--text-color-hover);
+        color: $text-color-hover;
       }
     }
 
     .ant-menu-item {
       &:hover {
-        background: var(--background-hover);
-        color: var(--text-color-hover);
+        background: $background-color-hover;
+        color: $text-color-hover;
       }
 
       &-selected {
-        background: var(--background-active);
-        color: var(--text-color-active);
+        background: $background-color-active;
+        color: $text-color-active;
 
         &:hover {
-          background: var(--background-active);
-          color: var(--text-color-active);
+          background: $background-color-active;
+          color: $text-color-active;
         }
       }
 
       &:not(&-selected):not(&-disabled):hover {
-        color: var(--text-color-hover);
-        background: var(--background-hover);
+        color: $text-color-hover;
+        background: $background-color-hover;
       }
     }
 

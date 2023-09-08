@@ -6,23 +6,23 @@
 </template>
 
 <script lang="ts">
-	import { Vue, Component, Prop } from 'vue-property-decorator'
-	import LineChart from './charts/Line.vue'
-	import BarChart from './charts/Bar.vue'
-	import Fund from './charts/Fund.vue'
+import { Vue, Component, Prop } from 'vue-property-decorator'
+import LineChart from './charts/Line.vue'
+import BarChart from './charts/Bar.vue'
+import Fund from './charts/Fund.vue'
 
 	@Component({
 		components: {
 			Fund,
 			LineChart,
 			BarChart,
-		}
+		},
 	})
-	export default class Dashboard extends Vue {
+export default class Dashboard extends Vue {
 
-		mounted() {
-		}
+	mounted() {
 	}
+}
 </script>
 
 <style lang="scss" scoped>

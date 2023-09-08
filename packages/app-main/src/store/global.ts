@@ -1,19 +1,25 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useStorage } from '@innbell/utils'
 
-export type Theme = 'dark' | 'light'
+export type Theme = 'inn-dark' | 'inn-light'
 export type LayoutMode = 'top' | 'left' 
 
 const { getStorage, setStorage } = useStorage()
 
 export const useGlobalStore = defineStore('global', function () {
 	// theme
-	const theme = ref<Theme>(getStorage<Theme>('innbell:theme', 'light'))
+	const theme = ref<Theme>(getStorage<Theme>('innbell:theme', 'inn-light'))
+	const isDark = computed(() => theme.value === 'inn-dark')
+	const themeClass = computed(() => isDark.value ? 'dark-theme' : 'light-theme')
 	const changeTheme = (_theme: Theme) => {
-		console.log(11, theme)
 		theme.value = _theme
 		setStorage('innbell:theme', _theme)
+	}
+
+	const toggleDarkOrLight = () => {
+		theme.value = isDark.value ? 'inn-light' : 'inn-dark'
+		setStorage('innbell:theme', theme.value)
 	}
 
 	// app layout mode
@@ -23,8 +29,12 @@ export const useGlobalStore = defineStore('global', function () {
 		appLayoutMode.value = mode
 	}
 
+
 	return {
 		theme,
+		isDark,
+		themeClass,
+		toggleDarkOrLight,
 		changeTheme,
 		appLayoutMode,
 		changeAppLayout,

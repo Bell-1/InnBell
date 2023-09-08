@@ -1,8 +1,9 @@
 <template>
-	<div :class="[ns.b()]">
+	<div :class="[ns.b(), ns.is('dark', isDark)]">
 		<breadcrumb :class="[ns.e('breadcrumb')]">
-			<breadcrumb-item>aaa</breadcrumb-item>
-			<breadcrumb-item>{{ route.path }}</breadcrumb-item>
+			<template v-for="route of getBreadcrumb()" :key="route.path">
+				<breadcrumb-item>{{ route.meta?.title }}</breadcrumb-item>
+			</template>
 		</breadcrumb>
 	</div>
 </template>
@@ -15,19 +16,44 @@ export default {
 <script lang="ts" setup>
 import { useNamespace } from '@innbell/utils'
 import { Breadcrumb, BreadcrumbItem } from 'ant-design-vue'
+import { onMounted } from 'vue';
 import { useRoute } from 'vue-router'
+import { useTheme } from '@/hooks/use-theme'
 
 const route = useRoute()
 const ns = useNamespace('AppBreadcrumb')
 
+const getBreadcrumb = () => route.matched.filter((item) => item.meta?.title)
+const { isDark } = useTheme()
+
+onMounted(() => {
+	console.log(111, route, getBreadcrumb())
+})
+
 </script>
 
 <style lang="scss">
-@include b('AppBreadcrumb'){
+@include b('AppBreadcrumb') {
   position: relative;
   padding: $padding-m $padding-l;
-  background: white;
   z-index: 10;
+
+  .ant-breadcrumb {
+    color: $text-color;
+
+    .ant-breadcrumb-separator {
+      color: $text-color;
+    }
+
+    li {
+      color: $text-color;
+
+      &:last-child {
+        color: $color-primary;
+      }
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;

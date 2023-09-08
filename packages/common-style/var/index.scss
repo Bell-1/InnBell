@@ -7,7 +7,7 @@ $color-danger: var(--inn-color-danger, #ff480b);
 $color-success: var(--inn-color-success, #63ff5a);
 $color-warning: var(--inn-color-warning, #eeee59);
 $color-info: var(--inn-color-info, #757575);
-$color-white: var(--inn-color-white, #ffffff);
+$color-white: var(--inn-color-white, #f1f5f9);
 $color-black: var(--inn-color-black, #000000);
 $color-gray: var(--inn-color-gray, #d1d1d1);
 
@@ -15,6 +15,9 @@ $color-gray: var(--inn-color-gray, #d1d1d1);
 $text-color-primary: var(--inn-text-color-primary, #000);
 $text-color: var(--inn-text-color, #333);
 $text-color-secondary: var(--inn-text-color-secondary, #666);
+$text-color-hover: var(--inn-text-color-hover, #666);
+$text-color-active: var(--inn-text-color-active, #666);
+$text-color-disabled: var(--inn-text-color-disabled, #999);
 // text disabled
 $text-color-disabled: var(--inn-text-color-disabled, #999);
 
@@ -51,10 +54,14 @@ $border-radius-small: var(--inn-border-radius-small, 2px);
 $border-radius-large: var(--inn-border-radius-large, 8px);
 
 // background
-$background-color: var(--inn-background-color, #ffffff);
+$background-color: var(--inn-background-color, #f7fafc);
 $background-color-secondary: var(--inn-background-color-secondary, #f7f9fc);
 // background disabled
 $background-color-disabled: var(--inn-background-color-disabled, #f5f5f5);
+// background hover
+$background-color-hover: var(--inn-background-color-hover, #f5f5f5);
+// background active
+$background-color-active: var(--inn-background-color-active, #f5f5f5);
 
 // size
 $font-size: var(--inn-font-size, 14px);

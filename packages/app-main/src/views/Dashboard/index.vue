@@ -1,16 +1,10 @@
 <template>
 	<div :class="ns.b()">
-		<!-- <div :class="ns.e('indicators')">
-			<indicator-card title="111" color="#ff00ff">
-				content
-			</indicator-card>
-			<indicator-card title="111" color="#f3454f"></indicator-card>
-			<indicator-card title="111" color="#24ff50"></indicator-card>
-			<indicator-card title="111" color="#f0e03f"></indicator-card>
-		</div>
-		<div class="">
-			<bar-chart></bar-chart>
-		</div> -->
+		<a-row :gutter="[12, 12]">
+			<welcome-row></welcome-row>
+			<statistic-row></statistic-row>
+		</a-row>
+		
 	</div>
 </template>
 <script lang="ts">
@@ -21,10 +15,18 @@ export default defineComponent({
 <script lang="ts" setup>
 import { defineComponent } from 'vue'
 import { useNamespace } from '@innbell/utils'
+import WelcomeRow from './components/WelcomeRow.vue'
+import StatisticRow from './components/StatisticRow.vue'
 import IndicatorCard from './components/IndicatorCard.vue'
 import BarChart from './components/BarChart.vue'
-	
+
 const ns = useNamespace('Dashboard')
+
+
+/**
+ * 获取一天中不同时段的问好
+ */
+
 </script>
 <style lang="scss" scoped>
 @include b('Dashboard') {
@@ -38,5 +40,6 @@ const ns = useNamespace('Dashboard')
 
 		}
 	}
+
 }
 </style>

@@ -178,10 +178,11 @@ function addNode(val: number): void {
 			width: 100%;
 			height: 100%;
 			padding: $padding-s;
-			box-shadow: inset 4px 4px 6px rgba(148, 148, 148, 0.5),
-				inset -4px -4px 6px rgba(231, 236, 236, 0.8);
+			// box-shadow: inset 4px 4px 6px rgba(148, 148, 148, 0.5),
+			// 	inset -4px -4px 6px rgba(231, 236, 236, 0.8);
 			border-radius: 4px;
 			border: none;
+			color: $text-color;
 		}
 	}
 
@@ -200,6 +201,7 @@ function addNode(val: number): void {
 		box-shadow: inset 4px 4px 6px rgba(148, 148, 148, 0.5),
 			inset -4px -4px 6px rgba(231, 236, 236, 0.8);
 		border-radius: 4px;
+		color: $text-color;
 
 		label {
 			margin-right: 20px;

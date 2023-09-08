@@ -1,11 +1,13 @@
 <template>
-	<layout-header :class="[ns.b(), theme]">
+	<layout-header :class="[ns.b()]">
 		<div :class="ns.e('left')">
 			<div :class="ns.e('logo')">INNBELL</div>
 		</div>
-		<div :class="ns.e('content')"></div>
+		<div :class="ns.e('content')">
+			<app-breadcrumb></app-breadcrumb>
+		</div>
 		<div :class="ns.e('right')">
-			<theme-switch :theme="theme" @change="changeTheme"></theme-switch>
+			<theme-switch></theme-switch>
 
 			<a 
 				:class="ns.e('github-corner')"
@@ -40,19 +42,15 @@ export default {
 </script>
 <script lang="ts" setup>
 import { toRefs } from 'vue'
+import AppBreadcrumb from './AppBreadcrumb.vue'
 import ThemeSwitch from '@/components/ThemeSwitch/index.vue'
 import { useNamespace } from '@innbell/utils'
 import { useUserStore } from '@/store/user'
 import { LayoutHeader, Dropdown as ADropdown, Menu as AMenu, MenuItem as AMenuItem } from 'ant-design-vue'
-import { useGlobalStore } from '@/store/global'
 import githubCornerSvg from '@innbell/common-assets/svg/github-corner.svg'
 
 // useNamespace
 const ns = useNamespace('app-header')
-
-// 
-const globalStore = useGlobalStore()
-const { theme, changeTheme } = toRefs(globalStore)
 
 // user store
 const userSore = useUserStore()
@@ -67,8 +65,8 @@ const { user } = toRefs(userSore)
   height: 60px;
   display: flex;
   align-items: center;
-  color: var(--text-color) !important;
-  background: var(--background-color) !important;
+  color: $text-color !important;
+  background: $background-color !important;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   z-index: 100;
 
@@ -92,7 +90,7 @@ const { user } = toRefs(userSore)
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    color: var(--text-color, $text-color);
+    color: $text-color;
 
     &>* {
       margin-left: $margin-s;

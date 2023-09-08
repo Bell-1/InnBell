@@ -2,12 +2,15 @@ import { createApp } from 'vue'
 import router from '@/router'
 import store from '@/store'
 import { innbellPlugin } from '@/components/innbellPlugin'
+import Antd from 'ant-design-vue'
 // component
 import App from './App.vue'
 // micro app
 import '@/micro'
 // iconfont
 import '@innbell/common-assets/font/iconfont.css'
+// Antd
+import 'ant-design-vue/dist/reset.css'
 // style
 import 'normalize.css'
 
@@ -18,7 +21,7 @@ const app = createApp(App)
 app.use(innbellPlugin)
 
 // antd
-// app.use(Antd)
+app.use(Antd)
 
 // store
 app.use(store)

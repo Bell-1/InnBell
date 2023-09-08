@@ -1,5 +1,5 @@
 <template>
-	<div :class="[ns.b(), ns.is('dark', isDark)]" @click="emitChange">
+	<div :class="[ns.b(), ns.is('dark', globalStore.isDark)]" @click="globalStore.toggleDarkOrLight">
 		<button :class="[ns.e('button')]">
 			<span :class="[ns.e('icon')]" data-v-ba3bff7e="">
 				<svg
@@ -51,21 +51,12 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { useNamespace } from '@innbell/utils'
+import { useGlobalStore } from '@/store/global'
 
-const props = defineProps({
-	theme: {
-		type: String,
-		default: 'light',
-	},
-})
-
-const emit = defineEmits(['change'])
-
-const isDark = computed(() => props.theme === 'dark')
 const ns = useNamespace('ThemeSwitch')
-const emitChange = () => emit('change', props.theme === 'dark' ? 'light' : 'dark')
+const globalStore = useGlobalStore()
+
 </script>
 
 <style lang="scss">

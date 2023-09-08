@@ -7,7 +7,7 @@ const notFound = () => import('@/views/NotFound/index.vue')
 export const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
-		name: 'Home',
+		name: 'Dashboard',
 		component: Layout,
 		children: [
 			{
@@ -16,7 +16,7 @@ export const routes: RouteRecordRaw[] = [
 			},
 		],
 		meta: {
-			title: 'Dashboard',
+			title: '首页',
 			icon: '',
 			isMenu: true,
 		},
@@ -25,6 +25,11 @@ export const routes: RouteRecordRaw[] = [
 		path: '/login',
 		name: 'Login',
 		component: () => import('@/views/Login/index.vue'),
+		meta: {
+			title: '登录',
+			icon: '',
+			isMenu: true,
+		},
 	},
 	{
 		path: '/chat',
@@ -37,7 +42,7 @@ export const routes: RouteRecordRaw[] = [
 			},
 		],
 		meta: {
-			title: 'ChatChatGPT',
+			title: 'ChatGPT',
 			icon: '',
 			isMenu: true,
 		},

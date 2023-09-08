@@ -1,3 +1,33 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $background-color;
+	font-size: $font-size;
+	color: $text-color;
+	background: $background-color-secondary;
+}
+
+// 默认主题
+// .light-theme {
+// }
+
+// 暗黑主题
+.dark-theme {
+	// 背景色
+	--inn-background-color: #171717;
+	--inn-background-color-secondary: #1e1e20;
+	--inn-background-color-disabled: #1e1e20;
+	--inn-background-color-hover: #424242;
+	--inn-background-color-active: #424242;
+
+	// 文字色
+	--inn-text-color-primary: #f8fafc;
+	--inn-text-color: #fafafa;
+	--inn-text-color-secondary: #f9fafc;
+	--inn-text-color-placeholder: #f1f5f9;
+	--inn-text-color-hover: #f9fafc;
+	--inn-text-color-active: #f9fafc;
+	--inn-text-color-disable: #f1f5f9;
 }

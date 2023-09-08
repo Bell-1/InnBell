@@ -7,6 +7,11 @@ export const routes: RouteRecordRaw[] = [
 		path: '/vue',
 		component: Layout,
 		name: 'SUB_VUE',
+		meta: {
+			title: 'micro-vue',
+			icon: '',
+			isMenu: true,
+		},
 		children: [
 			{
 				path: 'binary-tree',
@@ -72,11 +77,6 @@ export const routes: RouteRecordRaw[] = [
 				},
 			},
 		],
-		meta: {
-			title: 'micro-vue',
-			icon: '',
-			isMenu: true,
-		},
 	},
 ]
 
