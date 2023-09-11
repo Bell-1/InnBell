@@ -11,6 +11,7 @@
 | -------------- | --------------- | ----------- | ---------------------------------------------------------------------------------------------- | ----------- |
 | `autofocus`    | `autofocus`     |             | `boolean`                                                                                      | `false`     |
 | `circle`       | `circle`        |             | `boolean`                                                                                      | `false`     |
+| `color`        | `color`         |             | `string`                                                                                       | `undefined` |
 | `customClass`  | `custom-class`  |             | `string`                                                                                       | `undefined` |
 | `disabled`     | `disabled`      |             | `boolean`                                                                                      | `false`     |
 | `ghost`        | `ghost`         |             | `boolean`                                                                                      | `false`     |

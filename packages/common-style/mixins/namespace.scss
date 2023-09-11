@@ -50,3 +50,11 @@
     }
   }
 }
+
+@mixin whenNot($state) {
+	@at-root {
+		&:not(.#{$state-prefix + $state}) {
+			@content;
+		}
+	}
+}

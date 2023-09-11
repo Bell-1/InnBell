@@ -30,4 +30,10 @@ html {
 	--inn-text-color-hover: #f9fafc;
 	--inn-text-color-active: #f9fafc;
 	--inn-text-color-disable: #f1f5f9;
+
+	// 解决主题class不在HTML中无法初始化底下样式问题
+	font-family: $background-color;
+	font-size: $font-size;
+	color: $text-color;
+	background: $background-color-secondary;
 }

@@ -9,6 +9,7 @@ export namespace Components {
     interface InnButton {
         "autofocus": boolean;
         "circle": boolean;
+        "color": string;
         "customClass": string;
         "disabled": boolean;
         "ghost": boolean;
@@ -49,6 +50,7 @@ declare namespace LocalJSX {
     interface InnButton {
         "autofocus"?: boolean;
         "circle"?: boolean;
+        "color"?: string;
         "customClass"?: string;
         "disabled"?: boolean;
         "ghost"?: boolean;

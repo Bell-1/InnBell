@@ -20,7 +20,8 @@ export const InnButton = /*@__PURE__*/ defineContainer<JSX.InnButton>('inn-butto
   'circle',
   'ghost',
   'autofocus',
-  'nativeType'
+  'nativeType',
+  'color'
 ]);
 
 

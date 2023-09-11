@@ -1,62 +1,75 @@
 <template>
-  <div :class="[ns.b()]">
-    <div :class="ns.e('title')">This is a Vue demo that uses the Innbell-ui Button.</div>
-    <div :class="[btnNs.b()]">
-      <div :class="[btnNs.e('group')]">
-        <div :class="btnNs.e('title')">base</div>
-        <inn-button>default</inn-button>
-        <inn-button type="primary">primary</inn-button>
-        <inn-button type="success">success</inn-button>
-        <inn-button type="warning">warning</inn-button>
-        <inn-button type="danger">danger</inn-button>
-        <inn-button type="dashed">dashed</inn-button>
-        <inn-button type="text">text</inn-button>
-        <inn-button type="link">link</inn-button>
-      </div>
-      <div :class="[btnNs.e('group')]">
-        <div :class="btnNs.e('title')">ghost</div>
-        <inn-button ghost>default</inn-button>
-        <inn-button type="primary" ghost>primary</inn-button>
-        <inn-button type="success" ghost>success</inn-button>
-        <inn-button type="warning" ghost>warning</inn-button>
-        <inn-button type="danger" ghost>danger</inn-button>
-      </div>
+	<div :class="[ns.b()]">
+		asfasfasfd
+		<div :class="ns.e('title')">This is a Vue demo that uses the Innbell-ui Button.</div>
+		<div :class="[btnNs.b()]">
+			<div :class="[btnNs.e('group')]">
+				<div :class="btnNs.e('title')">base</div>
+				<inn-button>default</inn-button>
+				<inn-button type="primary">primary</inn-button>
+				<inn-button type="success">success</inn-button>
+				<inn-button type="warning">warning</inn-button>
+				<inn-button type="danger">danger</inn-button>
+				<inn-button type="dashed">dashed</inn-button>
+				<inn-button type="text">text</inn-button>
+				<inn-button type="link">link</inn-button>
+			</div>
+			<div :class="[btnNs.e('group')]">
+				<div :class="btnNs.e('title')">custom color</div>
+				<inn-button color="#fff000">custom color</inn-button>
+				<inn-button color="#eac0df">custom color</inn-button>
+				<inn-button color="#4d2ddf">custom color</inn-button>
+				<inn-button color="#8f09ff">custom color</inn-button>
+				<inn-button color="#2f601f">custom color</inn-button>
+				<inn-button color="#11625f">custom color</inn-button>
+				<inn-button color="#662549">custom color</inn-button>
+				<inn-button color="#EF9595">custom color</inn-button>
+				<inn-button color="#94A684">custom color</inn-button>
+			</div>
+			<div :class="[btnNs.e('group')]">
+				<div :class="btnNs.e('title')">ghost</div>
+				<inn-button color="black" ghost>default</inn-button>
+				<inn-button type="primary" ghost>primary</inn-button>
+				<inn-button type="success" ghost>success</inn-button>
+				<inn-button type="warning" ghost>warning</inn-button>
+				<inn-button type="danger" ghost>danger</inn-button>
+			</div>
 
-      <div :class="[btnNs.e('group')]">
-        <div :class="btnNs.e('title')">ghost</div>
-        <inn-button round>default</inn-button>
-        <inn-button type="primary" round>primary</inn-button>
-        <inn-button type="success" round>success</inn-button>
-        <inn-button type="warning" round>warning</inn-button>
-        <inn-button type="danger" round>danger</inn-button>
-      </div>
+			<div :class="[btnNs.e('group')]">
+				<div :class="btnNs.e('title')">round</div>
+				<inn-button round>default</inn-button>
+				<inn-button type="primary" round>primary</inn-button>
+				<inn-button type="success" round>success</inn-button>
+				<inn-button type="warning" round>warning</inn-button>
+				<inn-button type="danger" round>danger</inn-button>
+			</div>
 
-      <div :class="[btnNs.e('group')]">
-        <div :class="btnNs.e('title')">ghost + round</div>
-        <inn-button ghost round>default</inn-button>
-        <inn-button type="primary" ghost round>primary</inn-button>
-        <inn-button type="success" ghost round>success</inn-button>
-        <inn-button type="warning" ghost round>warning</inn-button>
-        <inn-button type="danger" ghost round>danger</inn-button>
-      </div>
+			<div :class="[btnNs.e('group')]">
+				<div :class="btnNs.e('title')">ghost + round</div>
+				<inn-button color="black" ghost round>default</inn-button>
+				<inn-button type="primary" ghost round>primary</inn-button>
+				<inn-button type="success" ghost round>success</inn-button>
+				<inn-button type="warning" ghost round>warning</inn-button>
+				<inn-button type="danger" ghost round>danger</inn-button>
+			</div>
 
-      <div :class="[btnNs.e('group')]">
-        <div :class="btnNs.e('title')">circle</div>
-        <inn-button circle>B</inn-button>
-        <inn-button type="primary" circle>P</inn-button>
-        <inn-button type="success" circle>S</inn-button>
-        <inn-button type="warning" circle>W</inn-button>
-        <inn-button type="danger" circle>D</inn-button>
-      </div>
-    </div>
+			<div :class="[btnNs.e('group')]">
+				<div :class="btnNs.e('title')">circle</div>
+				<inn-button circle>B</inn-button>
+				<inn-button type="primary" circle>P</inn-button>
+				<inn-button type="success" circle>S</inn-button>
+				<inn-button type="warning" circle>W</inn-button>
+				<inn-button type="danger" circle>D</inn-button>
+			</div>
+		</div>
 
-    <div :class="ns.e('title')">Calculator</div>
-    <inn-calculator></inn-calculator>
-  </div>
+		<div :class="ns.e('title')">Calculator</div>
+		<inn-calculator></inn-calculator>
+	</div>
 </template>
 <script lang="ts">
 export default {
-  name: 'InnUI',
+	name: 'InnUI',
 }
 </script>
 
@@ -89,6 +102,9 @@ const btnNs = useNamespace('InnUI-btn')
 
   @include e('group'){
     margin-bottom: $margin-m;
+		.inn-button {
+			margin: 6px 6px;
+		}
   }
 
   @include e('title'){
