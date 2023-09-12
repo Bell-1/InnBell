@@ -3,7 +3,7 @@
 		<layout :class="ns.e('container')">
 			<app-header></app-header>
 			<layout>
-				<app-sider></app-sider>
+				<app-side></app-side>
 				<layout>
 					<layout-content :class="ns.e('main')">
 						<router-view></router-view>
@@ -22,7 +22,7 @@ export default {
 <script lang="ts" setup>
 import { useNamespace } from '@innbell/utils'
 import AppHeader from './components/AppHeader.vue'
-import AppSider from './components/AppSider.vue'
+import AppSide from './components/AppSide.vue'
 import { Space, Layout, LayoutContent } from 'ant-design-vue'
 
 const ns = useNamespace('LayoutTopMode')

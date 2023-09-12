@@ -17,10 +17,12 @@
     "@micro-zoe/micro-app": "1.0.0-beta.5",
     "@unocss/reset": "^0.55.2",
     "ant-design-vue": "^4.0.1",
+    "echarts": "^5.4.3",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.6",
     "unocss": "0.54.1",
     "vue": "^3.3.4",
+    "vue-echarts": "^6.6.1",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {

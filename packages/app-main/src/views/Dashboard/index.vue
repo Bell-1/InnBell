@@ -3,6 +3,8 @@
 		<a-row :gutter="[12, 12]">
 			<welcome-row></welcome-row>
 			<statistic-row></statistic-row>
+			<chart-row></chart-row>
+			<line-chart-row></line-chart-row>
 		</a-row>
 		
 	</div>
@@ -17,6 +19,8 @@ import { defineComponent } from 'vue'
 import { useNamespace } from '@innbell/utils'
 import WelcomeRow from './components/WelcomeRow.vue'
 import StatisticRow from './components/StatisticRow.vue'
+import ChartRow from './components/ChartRow.vue'
+import LineChartRow from './components/LineChartRow.vue'
 import IndicatorCard from './components/IndicatorCard.vue'
 import BarChart from './components/BarChart.vue'
 

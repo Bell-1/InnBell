@@ -1,80 +1,19 @@
 <template>
-	<a-col
-		:lg="6"
-		:md="12"
-		:sm="24"
-		:xl="6"
-		:xs="24">
-		<a-card shadow="never">
-			<template #header>
-				<span>访问量</span>
-			</template>
-					
-			<div class="bottom">
-				<span>
-					日均访问量:
-					{{ statistic.day }}
-				</span>
-			</div>
-		</a-card>
-	</a-col>
-	<a-col
-		:lg="6"
-		:md="12"
-		:sm="24"
-		:xl="6"
-		:xs="24">
-		<a-card shadow="never">
-			<template #header>
-				<span>访问量</span>
-			</template>
-					
-			<div class="bottom">
-				<span>
-					日均访问量:
-					{{ statistic.day }}
-				</span>
-			</div>
-		</a-card>
-	</a-col>
-	<a-col
-		:lg="6"
-		:md="12"
-		:sm="24"
-		:xl="6"
-		:xs="24">
-		<a-card shadow="never">
-			<template #header>
-				<span>访问量</span>
-			</template>
-					
-			<div class="bottom">
-				<span>
-					日均访问量:
-					{{ statistic.day }}
-				</span>
-			</div>
-		</a-card>
-	</a-col>
-	<a-col
-		:lg="6"
-		:md="12"
-		:sm="24"
-		:xl="6"
-		:xs="24">
-		<a-card shadow="never">
-			<template #header>
-				<span>访问量</span>
-			</template>
-					
-			<div class="bottom">
-				<span>
-					日均访问量:
-					{{ statistic.day }}
-				</span>
-			</div>
-		</a-card>
-	</a-col>
+	<template v-for="item of list" :key="item.title">
+		<a-col
+			:xs="24"
+			:sm="24"
+			:md="12"
+			:lg="6"
+			:xl="6"
+		>
+			<a-card shadow="never" :title="item.title">
+				<div class="count">
+					{{ item.value }}
+				</div>
+			</a-card>
+		</a-col>
+	</template>
 </template>
 <script lang="ts">
 export default {
@@ -83,21 +22,35 @@ export default {
 </script>
 
 <script lang="ts" setup>
-import { useNamespace } from '@innbell/utils'
+import { ref, reactive } from 'vue'
+import { useScrollNumber } from '@innbell/utils'
 
-const ns = useNamespace('StatisticRow')
+const { scrollNumber } = useScrollNumber()
 
-const statistic = {
-	day: 123,
-	week: 123,
-	month: 123,
-	year: 123,
+type Item = { title: string; value: number }
+const list = ref<Item[]>([
+	{ title: '今日访问量', value: 0 },
+	{ title: '昨日访问量', value: 0 },
+	{ title: '本周访问量', value: 0 },
+	{ title: '本月访问量', value: 0 },
+])
+
+function random() {
+	return ~~Math.round(Math.random() * 1000)
 }
+
+list.value.forEach((item) => {
+	scrollNumber(item.value, random(), (num: number) => item.value = ~~num)
+})
 
 </script>
 
-<style lang="scss">
-@include b('StatisticRow'){
-  
+<style lang="scss" scoped>
+.count {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	font-size: large;
 }
 </style>

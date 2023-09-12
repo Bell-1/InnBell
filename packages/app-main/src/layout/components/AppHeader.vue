@@ -75,9 +75,11 @@ const { user } = toRefs(userSore)
 
     @include e('logo') {
       height: 100%;
-      width: 148px;
       font-size: $font-size-large;
       color: #ab8fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
     }
   }
 

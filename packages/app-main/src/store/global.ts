@@ -23,12 +23,11 @@ export const useGlobalStore = defineStore('global', function () {
 	}
 
 	// app layout mode
-	const appLayoutMode = ref<LayoutMode>(getStorage<LayoutMode>('innbell:layout', 'top'))
+	const appLayoutMode = ref<LayoutMode>(getStorage<LayoutMode>('innbell:layout', 'left'))
 	const changeAppLayout = (mode: LayoutMode) => {
 		setStorage('innbell:layout', mode)
 		appLayoutMode.value = mode
 	}
-
 
 	return {
 		theme,

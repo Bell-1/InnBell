@@ -16,9 +16,11 @@
     "@innbell/utils": "workspace:^",
     "@splinetool/loader": "^0.9.434",
     "ant-design-vue": "^4.0.1",
+    "echarts": "^5.4.3",
     "gl-mat4": "^1.2.0",
     "three": "^0.155.0",
     "vue": "^3.2.47",
+    "vue-echarts": "^6.6.1",
     "vue-router": "^4.2.2"
   },
   "devDependencies": {

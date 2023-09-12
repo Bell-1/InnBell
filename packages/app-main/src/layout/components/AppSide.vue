@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
 export default {
-	name: '',
+	name: 'AppSide',
 }
 </script>
 <script lang="ts" setup>
@@ -26,7 +26,7 @@ import { getSiderBarRoutes } from '@/router'
 import { useRoute, useRouter } from 'vue-router'
 import { useMicroRouter } from '@/hooks/use-micro-router'
 
-const ns = useNamespace('AppSider')
+const ns = useNamespace('AppSide')
 
 const globalStore = useGlobalStore()
 const { theme } = toRefs(globalStore)
@@ -76,7 +76,7 @@ const handleSelectMenu = async(meneItem: any) => {
 
 </script>
 <style lang="scss">
-@include b('AppSider') {
+@include b('AppSide') {
   background: $background-color !important;
   color: $text-color !important;
 
